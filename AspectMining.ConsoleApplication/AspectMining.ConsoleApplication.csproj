@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28C02BF8-CBE1-42D2-8040-2BA5A31D4424}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AspectMining.ConsoleApplication</RootNamespace>
+    <AssemblyName>AspectMining.ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NLPModels\OpenNLP\en-chunker.bin" />
+    <None Include="NLPModels\OpenNLP\en-pos-maxent.bin" />
+    <None Include="NLPModels\OpenNLP\en-token.bin" />
+    <None Include="SpellCheck\Hunspell\en_US.aff" />
+    <None Include="SpellCheck\Hunspell\en_US.dic" />
+    <None Include="SpellCheck\Hunspell\hyph_en_US.dic" />
+    <None Include="SpellCheck\Hunspell\th_en_US_new.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AspectMining.Core\AspectMining.Core.csproj">
+      <Project>{cb859733-f010-420a-9314-e9d53970ab77}</Project>
+      <Name>AspectMining.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JavaLibraries\JavaLibraries.csproj">
+      <Project>{8f8a0656-ba2f-419f-8a89-38be8fc399ad}</Project>
+      <Name>JavaLibraries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{06d4d8ed-e061-4f6f-908e-b9b1307834b4}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dataset\HL\Apex AD2600 Progressive-scan DVD player.txt" />
+    <Content Include="Dataset\HL\Canon G3.txt" />
+    <Content Include="Dataset\HL\Canon PowerShot SD500.txt" />
+    <Content Include="Dataset\HL\Canon S100.txt" />
+    <Content Include="Dataset\HL\Creative Labs Nomad Jukebox Zen Xtra 40GB.txt" />
+    <Content Include="Dataset\HL\Diaper Champ.txt" />
+    <Content Include="Dataset\HL\Hitachi router.txt" />
+    <Content Include="Dataset\HL\ipod.txt" />
+    <Content Include="Dataset\HL\Linksys Router.txt" />
+    <Content Include="Dataset\HL\MicroMP3.txt" />
+    <Content Include="Dataset\HL\Nikon coolpix 4300.txt" />
+    <Content Include="Dataset\HL\Nokia 6600.txt" />
+    <Content Include="Dataset\HL\Nokia 6610.txt" />
+    <Content Include="Dataset\HL\norton.txt" />
+    <Content Include="Dataset\HL\Readme.txt" />
+    <Content Include="Dataset\SemEval\SemEval_Laptops_Train.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Dataset\SemEval\SemEval_Restaurants_Train.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SentiWordNet\SentiWordNet_3.0.0_20130122.txt" />
+    <Content Include="SpellCheck\Hunspell\Hunspellx64.dll" />
+    <Content Include="SpellCheck\Hunspell\Hunspellx64.pdb" />
+    <Content Include="SpellCheck\Hunspell\Hunspellx86.dll" />
+    <Content Include="SpellCheck\Hunspell\Hunspellx86.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
